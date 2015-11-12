@@ -21,7 +21,7 @@ namespace VersioningExplorer
 //            Assert.That(personV1.Age, Is.EqualTo(21), "age");
 
             // what if we add a new field to our person
-            var deserializedV1 = DataLoader.Load(Messages.V0());
+            var deserializedV1 = DataLoader.Load(Messages.V0(), 1);
             var person = (PersonV1)deserializedV1;
             Assert.That(person.Name, Is.EqualTo("joe"), "name");
             Assert.That(person.Age, Is.EqualTo(-1), "age");
@@ -97,7 +97,9 @@ namespace VersioningExplorer
     {
         public JObject Apply(JObject @from)
         {
-            throw new NotImplementedException();
+            @from["Age"] = -1;
+
+            return @from;
         }
     }
 }
