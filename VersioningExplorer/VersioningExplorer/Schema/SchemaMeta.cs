@@ -1,11 +1,11 @@
-﻿namespace VersioningExplorer
+﻿namespace VersioningExplorer.Schema
 {
-    class Schema
+    class SchemaMeta
     {
         public readonly string TypeAlias;
         public readonly int Version;
 
-        public Schema(string typeAlias, int version)
+        public SchemaMeta(string typeAlias, int version)
         {
             TypeAlias = typeAlias;
             Version = version;

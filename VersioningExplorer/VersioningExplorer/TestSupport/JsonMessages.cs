@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace VersioningExplorer
+namespace VersioningExplorer.TestSupport
 {
-    public class Messages
+    public static class JsonMessages
     {
         public static string V0()
         {
